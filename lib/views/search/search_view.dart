@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shopbuzzer/helpers/constants.dart';
+import 'package:shopbuzzer/views/product/product_view.dart';
+import 'package:shopbuzzer/widgets/mini_product_card.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
@@ -12,7 +15,7 @@ class _SearchViewState extends State<SearchView> {
   bool showClear = false;
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
         Container(
           width: double.infinity,
@@ -51,6 +54,21 @@ class _SearchViewState extends State<SearchView> {
                 border: InputBorder.none,
               ),
             ),
+          ),
+        ),
+        verticalSpace(height: 15.0),
+        Expanded(
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisSpacing: 2,
+              crossAxisSpacing: 2,
+              crossAxisCount: 2,
+              childAspectRatio: 0.75,
+            ),
+            itemCount: 8,
+            itemBuilder: (BuildContext context, int index) {
+              return const MiniProductCard();
+            },
           ),
         ),
       ],

@@ -3,6 +3,7 @@ import 'package:shopbuzzer/helpers/constants.dart';
 import 'package:shopbuzzer/views/cart/cart_view.dart';
 import 'package:shopbuzzer/views/discover/discover_view.dart';
 import 'package:shopbuzzer/views/notifications/notifications_view.dart';
+import 'package:shopbuzzer/views/profile/profile_view.dart';
 import 'package:shopbuzzer/views/search/search_view.dart';
 
 class HomeView extends StatefulWidget {
@@ -45,14 +46,16 @@ class _HomeViewState extends State<HomeView> {
         title: Text(
           _titleWidgets.elementAt(_selectedIndex),
           style: const TextStyle(
-            fontSize: 24,
+            fontSize: kBigTextSize,
             color: kBlackColor,
             fontWeight: FontWeight.bold,
           ),
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(routeTransition(const ProfileView()));
+            },
             icon: const CircleAvatar(
               backgroundImage: AssetImage("assets/images/ben.jpg"),
               maxRadius: kIconSize,

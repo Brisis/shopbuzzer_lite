@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopbuzzer/helpers/constants.dart';
+import 'package:shopbuzzer/views/seller/seller_view.dart';
 import 'package:story_view/story_view.dart';
 
 class ProductView extends StatefulWidget {
@@ -130,57 +131,62 @@ class _ProductViewState extends State<ProductView> {
               ),
             ),
             verticalSpace(),
-            Container(
-              // height: 80,
-              width: MediaQuery.of(context).size.width,
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: kWhiteColor,
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const CircleAvatar(
-                    backgroundColor: kBlackColor,
-                    maxRadius: 20,
-                    backgroundImage: AssetImage("assets/images/edg.png"),
-                  ),
-                  horizontalSpace(),
-                  Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text(
-                          "Edgars ZW",
-                          style: TextStyle(
-                            fontSize: kMediumTextSize,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        verticalSpace(),
-                        const Text(
-                          "Click to view profile",
-                          style: TextStyle(
-                            fontSize: kMediumTextSize,
-                            color: kBlackFaded,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(routeTransition(const SellerView()));
+              },
+              child: Container(
+                // height: 80,
+                width: MediaQuery.of(context).size.width,
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: kWhiteColor,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const CircleAvatar(
+                      backgroundColor: kBlackColor,
+                      maxRadius: 20,
+                      backgroundImage: AssetImage("assets/images/edg.png"),
                     ),
-                  ),
-                  horizontalSpace(),
-                  const Text(
-                    "5 mon",
-                    style: TextStyle(
-                      fontSize: kMediumTextSize,
-                      color: kBlackFaded,
+                    horizontalSpace(),
+                    Expanded(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Edgars ZW",
+                            style: TextStyle(
+                              fontSize: kMediumTextSize,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          verticalSpace(),
+                          const Text(
+                            "Click to view profile",
+                            style: TextStyle(
+                              fontSize: kMediumTextSize,
+                              color: kBlackFaded,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                    horizontalSpace(),
+                    const Text(
+                      "5 mon",
+                      style: TextStyle(
+                        fontSize: kMediumTextSize,
+                        color: kBlackFaded,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             verticalSpace(height: 30),

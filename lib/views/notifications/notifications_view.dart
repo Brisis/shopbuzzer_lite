@@ -12,7 +12,7 @@ class NotificationsView extends StatelessWidget {
         return const NotificationItem(
           name: "New Recommended Product",
           title:
-              "Tracey Jones just posted a new product similar to what you usually buy",
+              "Edgars just posted a new product similar to what you usually buy",
           time: 23,
         );
       },

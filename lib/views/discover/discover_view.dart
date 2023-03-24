@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopbuzzer/helpers/constants.dart';
 import 'package:shopbuzzer/views/product/product_view.dart';
+import 'package:shopbuzzer/views/seller/seller_view.dart';
 
 class DiscoverView extends StatelessWidget {
   const DiscoverView({super.key});
@@ -50,16 +51,22 @@ class DiscoverView extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Edgars, 25km",
-                          style: TextStyle(
-                            color: kWhiteColor,
-                            fontSize: kBigTextSize,
-                            fontWeight: FontWeight.bold,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context)
+                                .push(routeTransition(const SellerView()));
+                          },
+                          child: const Text(
+                            "Edgars, 25km",
+                            style: TextStyle(
+                              color: kWhiteColor,
+                              fontSize: kBigTextSize,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           "Brown Sunflower, Ladies Hats",
                           style: TextStyle(
                             color: kWhiteColor,

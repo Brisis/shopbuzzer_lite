@@ -44,20 +44,12 @@ class CartItem extends StatelessWidget {
                     //fontWeight: FontWeight.bold,
                   ),
                 ),
-                verticalSpace(),
-                const Text(
-                  "Size: M",
-                  style: TextStyle(
-                    fontSize: kMediumTextSize,
-                    color: kBlackFaded,
-                  ),
-                ),
                 verticalSpace(height: 10),
                 const Text(
                   "\$178.99",
                   style: TextStyle(
-                    fontSize: kBigTextSize,
-                    //fontWeight: FontWeight.bold,
+                    fontSize: kMediumTextSize,
+                    fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
                 ),

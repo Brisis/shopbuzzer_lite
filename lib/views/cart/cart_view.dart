@@ -31,56 +31,6 @@ class ShoppingCartView extends StatelessWidget {
                 title: "Boway Men's t-Shirts",
               ),
               verticalSpace(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      CupertinoIcons.delete,
-                      color: kRedColor,
-                      size: kIconSize,
-                    ),
-                  ),
-                  // Expanded(
-                  //   child: ElevatedButton(
-                  //     onPressed: () {},
-                  //     style: ButtonStyle(
-                  //       padding: MaterialStateProperty.all(
-                  //         EdgeInsets.zero,
-                  //       ),
-                  //       backgroundColor: MaterialStateProperty.all(kRedColor),
-                  //       shape: MaterialStateProperty.all(
-                  //         RoundedRectangleBorder(
-                  //           borderRadius: BorderRadius.circular(10),
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     child: Row(
-                  //       mainAxisAlignment: MainAxisAlignment.center,
-                  //       crossAxisAlignment: CrossAxisAlignment.center,
-                  //       children: [
-                  //         IconButton(
-                  //           onPressed: () {},
-                  //           icon: const Icon(
-                  //             CupertinoIcons.delete,
-                  //             color: kWhiteColor,
-                  //             size: kBigTextSize,
-                  //           ),
-                  //         ),
-                  //         const Text(
-                  //           "Empty Cart",
-                  //           style: TextStyle(
-                  //             fontSize: kMediumTextSize,
-                  //             color: Colors.white,
-                  //           ),
-                  //         ),
-                  //       ],
-                  //     ),
-                  //   ),
-                  //)
-                ],
-              ),
             ],
           ),
         ),
@@ -98,24 +48,20 @@ class BottomCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // ListTile(
-        //   onTap: () {},
-        //   contentPadding: EdgeInsets.zero,
-        //   leading: const Text(
-        //     "Promo Code or Vouchers",
-        //     style: TextStyle(
-        //       fontSize: kBigTextSize,
-        //       color: kBlackColor,
-        //       fontWeight: FontWeight.w600,
-        //     ),
-        //   ),
-        //   trailing: const Icon(
-        //     Icons.arrow_forward_ios,
-        //     color: kBlackFaded,
-        //     size: kIconSize,
-        //   ),
-        // ),
-        // verticalSpace(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                CupertinoIcons.delete,
+                color: kRedColor,
+                size: kIconSize,
+              ),
+            ),
+          ],
+        ),
+        verticalSpace(),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [

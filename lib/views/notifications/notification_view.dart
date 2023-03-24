@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopbuzzer/helpers/constants.dart';
+import 'package:shopbuzzer/views/product/product_view.dart';
+import 'package:shopbuzzer/views/seller/seller_view.dart';
 
 class NotificationView extends StatelessWidget {
   const NotificationView({super.key});
@@ -55,7 +57,10 @@ class NotificationView extends StatelessWidget {
                   ),
                   verticalSpace(height: 30),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context)
+                          .push(routeTransition(const SellerView()));
+                    },
                     child: Column(
                       children: [
                         Container(
@@ -87,7 +92,7 @@ class NotificationView extends StatelessWidget {
                   ),
                   verticalSpace(height: 30),
                   const Text(
-                    "Tracey Jones just posted a new product similar to what you usually buy",
+                    "Edgars just posted a new product similar to what you usually buy",
                     style: TextStyle(
                       fontSize: kMediumTextSize,
                       color: kBlackFaded,
@@ -123,8 +128,8 @@ class NotificationView extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigator.of(context)
-                      //     .push(routeTransition(const CheckoutView()));
+                      Navigator.of(context)
+                          .push(routeTransition(const ProductView()));
                     },
                     style: ButtonStyle(
                       padding:
@@ -137,10 +142,11 @@ class NotificationView extends StatelessWidget {
                       ),
                     ),
                     child: const Text(
-                      "Go to Link",
+                      "View Product",
                       style: TextStyle(
                         fontSize: kMidHeaderTextSize,
                         color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
