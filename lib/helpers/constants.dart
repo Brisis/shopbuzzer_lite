@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-const kPrimaryColor = Color(0xFFD61EDA);
+// const kPrimaryColor = Color(0xFFD61EDA);
+const kPrimaryColor = Color(0xFF111D36);
 const kSecondaryColor = Color(0xFFE839B5);
 const kBackgroundColor = Color(0xFFF9F8F6);
 const kBlackColor = Colors.black;

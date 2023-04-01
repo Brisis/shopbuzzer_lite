@@ -33,26 +33,14 @@ class CheckoutView extends StatelessWidget {
             size: kIconSize,
           ),
         ),
-        title: Center(
-          child: Text(
-            "Checkout",
-            style: TextStyle(
-              fontSize: kBigTextSize,
-              fontWeight: FontWeight.bold,
-              color: kBlackColor.withOpacity(0.7),
-            ),
+        title: const Text(
+          "Checkout",
+          style: TextStyle(
+            fontSize: kBigTextSize,
+            fontWeight: FontWeight.bold,
+            color: kBlackColor,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.more_vert,
-              color: kBlackColor,
-              size: kIconSize,
-            ),
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -64,8 +52,7 @@ class CheckoutView extends StatelessWidget {
                   const Text(
                     "Delivery Address",
                     style: TextStyle(
-                      fontSize: kBigTextSize,
-                      // fontFamily: 'ShopHeader',
+                      fontSize: kMediumTextSize,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -74,7 +61,7 @@ class CheckoutView extends StatelessWidget {
                     onTap: () {},
                     contentPadding: EdgeInsets.zero,
                     leading: Container(
-                      height: 70,
+                      height: 60,
                       width: 60,
                       decoration: BoxDecoration(
                         color: kWhiteColor,
@@ -93,7 +80,7 @@ class CheckoutView extends StatelessWidget {
                       child: Text(
                         "20845 Oakridge Farm Lane",
                         style: TextStyle(
-                          fontSize: kMediumTextSize,
+                          fontSize: kNormalTextSize,
                           color: kBlackColor.withOpacity(0.8),
                           fontWeight: FontWeight.w600,
                         ),
@@ -102,83 +89,21 @@ class CheckoutView extends StatelessWidget {
                     subtitle: const Text(
                       "New York (NYC)",
                       style: TextStyle(
-                        fontSize: kMediumTextSize,
+                        fontSize: kSmallerTextSize,
                         color: kBlackFaded,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     trailing: const Icon(
-                      Icons.arrow_forward_ios,
+                      Icons.edit,
                       color: kBlackFaded,
                       size: kIconSize,
-                    ),
-                  ),
-                  verticalSpace(height: 30),
-                  const Text(
-                    "Payment Method",
-                    style: TextStyle(
-                      fontSize: kBigTextSize,
-                      // fontFamily: 'ShopHeader',
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  verticalSpace(height: 15),
-                  const PaymentItem(
-                    title: "Buzzer Wallet",
-                    accountNumber: ".... .... 2781 9091",
-                    icon: Icons.noise_aware,
-                  ),
-                  const PaymentItem(
-                    title: "Master Card",
-                    accountNumber: ".... .... 2781 9091",
-                    icon: Icons.card_membership,
-                  ),
-                  const PaymentItem(
-                    title: "Pay Now",
-                    accountNumber: ".... .... 2781 9091",
-                    icon: Icons.paypal,
-                  ),
-                  verticalSpace(height: 15),
-                  ListTile(
-                    onTap: () {},
-                    contentPadding: EdgeInsets.zero,
-                    leading: const Text(
-                      "My Cart",
-                      style: TextStyle(
-                        fontSize: kBigTextSize,
-                        color: kBlackColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    trailing: const Icon(
-                      Icons.arrow_forward_ios,
-                      color: kBlackFaded,
-                      size: kIconSize,
-                    ),
-                  ),
-                  verticalSpace(height: 15),
-                  SizedBox(
-                    height: 120,
-                    width: MediaQuery.of(context).size.width,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      scrollDirection: Axis.horizontal,
-                      itemCount: cartItems.length,
-                      itemBuilder: (context, index) {
-                        return SizedBox(
-                          width: 160,
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 10.0),
-                            child: cartItems[index],
-                          ),
-                        );
-                      },
                     ),
                   ),
                 ],
               ),
             ),
-            BottomCart(),
+            const BottomPaySection(),
           ],
         ),
       ),
@@ -186,8 +111,8 @@ class CheckoutView extends StatelessWidget {
   }
 }
 
-class BottomCart extends StatelessWidget {
-  const BottomCart({super.key});
+class BottomPaySection extends StatelessWidget {
+  const BottomPaySection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -219,10 +144,7 @@ class BottomCart extends StatelessWidget {
           children: [
             Expanded(
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(routeTransition(const CheckoutView()));
-                },
+                onPressed: () {},
                 style: ButtonStyle(
                   padding:
                       MaterialStateProperty.all(const EdgeInsets.all(10.0)),

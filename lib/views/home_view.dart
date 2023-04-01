@@ -81,41 +81,35 @@ class _HomeViewState extends State<HomeView> {
             ),
           ],
         ),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(30.0),
-            topRight: Radius.circular(30.0),
-          ),
-          child: BottomNavigationBar(
-            // unselectedItemColor: Colors.grey,
-            selectedItemColor: kPrimaryColor,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            iconSize: kIconSize,
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _selectedIndex,
-            onTap: _onItemTapped,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.compass_calibration),
-                label: 'Discover',
+        child: BottomNavigationBar(
+          // unselectedItemColor: Colors.grey,
+          selectedItemColor: kPrimaryColor,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          iconSize: kIconSize,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.cached_rounded),
+              label: 'Discover',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.notifications_active),
+              label: 'Notifications',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_cart,
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.notifications_active),
-                label: 'Notifications',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Search',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.shopping_cart,
-                ),
-                label: 'Cart',
-              ),
-            ],
-          ),
+              label: 'Cart',
+            ),
+          ],
         ),
       ),
     );

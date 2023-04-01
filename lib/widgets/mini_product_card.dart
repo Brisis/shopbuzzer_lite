@@ -11,39 +11,54 @@ class MiniProductCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(routeTransition(const ProductView()));
       },
-      child: Card(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          color: kWhiteColor,
+        ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Expanded(
-              child: Image.asset(
-                "assets/images/sun.jpeg",
-                fit: BoxFit.cover,
+            Container(
+              height: 150,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/8.png",
+                  ),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    "Brown Sunflower, Ladies Hats",
-                    style: TextStyle(
-                      fontSize: kMediumTextSize,
-                      color: kBlackFaded,
-                    ),
-                  ),
-                  Text(
-                    "\$286.98",
-                    style: TextStyle(
-                      fontSize: kMediumTextSize,
-                      color: kBlackColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                "\$286.98",
+                style: TextStyle(
+                  fontSize: kMediumTextSize,
+                  color: kBlackColor,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
+              // child: Column(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   children: const [
+              //     Text(
+              //       "Brown Sunflower, Ladies Hats",
+              //       style: TextStyle(
+              //         fontSize: kMediumTextSize,
+              //         color: kBlackFaded,
+              //       ),
+              //     ),
+
+              //   ],
+              // ),
             ),
           ],
         ),

@@ -55,6 +55,8 @@ class NotificationItem extends StatelessWidget {
                         fontSize: kMediumTextSize,
                         fontWeight: FontWeight.bold,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     Text(
                       title,

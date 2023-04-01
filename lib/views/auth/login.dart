@@ -78,8 +78,8 @@ class _LoginViewState extends State<LoginView> {
             const Text(
               "Email",
               style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
               ),
             ),
             TextField(
@@ -93,8 +93,8 @@ class _LoginViewState extends State<LoginView> {
             const Text(
               "Password",
               style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w500,
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
               ),
             ),
             TextField(
@@ -113,7 +113,7 @@ class _LoginViewState extends State<LoginView> {
                   onPressed: () {},
                   child: const Text(
                     'Forgot Password',
-                    style: TextStyle(color: kDeepBlue, fontSize: 15),
+                    style: TextStyle(color: kPrimaryColor, fontSize: 15),
                   ),
                 ),
               ],
@@ -160,7 +160,7 @@ class _LoginViewState extends State<LoginView> {
                 "New User? Create Account",
                 style: TextStyle(
                   fontSize: 15,
-                  color: kDeepBlue,
+                  color: kPrimaryColor,
                 ),
               ),
             ),

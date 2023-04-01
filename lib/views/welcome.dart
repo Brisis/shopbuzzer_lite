@@ -17,8 +17,8 @@ class WelcomeView extends StatelessWidget {
               const Text(
                 "ShopBuzzer",
                 style: TextStyle(
-                  fontSize: 48,
-                  fontFamily: 'ShopHeader',
+                  fontSize: 28,
+                  // fontFamily: 'ShopHeader',
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -83,10 +83,10 @@ class WelcomeView extends StatelessWidget {
                   ),
                   horizontalSpace(width: 20),
                   Container(
-                    height: 150.0,
-                    width: 1.5,
+                    height: 130.0,
+                    width: 1.0,
                     decoration: const BoxDecoration(
-                      color: kSecondaryColor,
+                      color: kBlackColor,
                     ),
                   ),
                   horizontalSpace(width: 20),

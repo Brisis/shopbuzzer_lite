@@ -80,8 +80,8 @@ class _RegistrationViewState extends State<RegistrationView> {
               const Text(
                 "Full Name",
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
@@ -95,8 +95,8 @@ class _RegistrationViewState extends State<RegistrationView> {
               const Text(
                 "Email",
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
@@ -111,8 +111,8 @@ class _RegistrationViewState extends State<RegistrationView> {
               const Text(
                 "Password",
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               TextField(
@@ -165,7 +165,7 @@ class _RegistrationViewState extends State<RegistrationView> {
                   "Already Registered? Login",
                   style: TextStyle(
                     fontSize: 15,
-                    color: kDeepBlue,
+                    color: kPrimaryColor,
                   ),
                 ),
               ),

@@ -23,7 +23,7 @@ class SellerView extends StatelessWidget {
           ),
         ),
         title: const Text(
-          "Seller Profile",
+          "@Edgars",
           style: TextStyle(
             fontSize: kBigTextSize,
             color: kBlackColor,
